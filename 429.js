@@ -1,7 +1,7 @@
 (function() {
     const el = document.getElementById('ms');
     const data = el ? el.dataset : {};
-    const reason = data.reason ? decodeURIComponent(data.reason) : "";
+    const reason = data.reason ? decodeURIComponent(data.reason.replace(/\+/g, ' ')) : "";
 
     const html = `<!DOCTYPE html>
 <html lang="en">
